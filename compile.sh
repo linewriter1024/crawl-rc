@@ -1,4 +1,6 @@
 #!/bin/bash
+URL="https://github.com/shacknetisp/crawl-rc"
+
 cd "$(dirname "$0")"
 test -e compile.sh || exit 1
 
@@ -8,8 +10,12 @@ TMP="/tmp/crc_$RANDOM"
 touch "$TMP"
 
 echo "#-#-# Automatically Compiled Units"
+echo "#-#-# Generated from $URL"
+echo "#-#-# Units Begin:"
+
 for i in url/*; do
     test -e "$i" || continue;
+
     echo
     echo "#-#-# Unit:" "$(basename "$i")"
     curl "$(cat "$i")" > "$TMP" && {
