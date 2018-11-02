@@ -2,6 +2,8 @@
 cd "$(dirname "$0")"
 test -e compile.sh || exit 1
 
+mkdir -p url_cache
+
 TMP="/tmp/crc_$RANDOM"
 touch "$TMP"
 
