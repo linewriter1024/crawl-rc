@@ -1,0 +1,4 @@
+autopickup_exceptions += <potion of lignification
+autopickup_exceptions += <scroll of immolation
+autopickup_exceptions += >wand of random effects
+item_slot += potion of blood:q

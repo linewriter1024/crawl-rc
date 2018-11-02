@@ -1,0 +1,7 @@
+hp_warning = 50
+hp_colour = 70:yellow, 40:red
+
+show_more = false
+bold_brightens_foreground = true
+view_max_width = 81
+view_max_height = 50

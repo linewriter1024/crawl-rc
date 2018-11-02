@@ -1,0 +1,4 @@
+# Base macros, first macro must use "macros = " instead of "macros +="
+
+# "Prayer", first god ability.
+macros = M p aa
