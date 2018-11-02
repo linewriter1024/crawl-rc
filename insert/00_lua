@@ -1,0 +1,15 @@
+# Define ready registration.
+{
+    ready_r_f = function() end
+    function ready_r(f)
+        local old = ready_r_f
+        function ready_r_f(...)
+            old(...)
+            f(...)
+        end
+    end
+}
+
+<
+    ready = ready_r_f
+>
