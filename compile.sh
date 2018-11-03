@@ -6,8 +6,6 @@ test -e compile.sh || exit 1
 
 ROOT="$(pwd)"
 
-mkdir -p url_cache
-
 TMP="/tmp/crc_$RANDOM"
 touch "$TMP"
 
