@@ -1,4 +1,9 @@
-autopickup_exceptions += <potions? of lignification
-autopickup_exceptions += <scrolls? of immolation
+# Force pickup of some "dangerous" items.
+autopickup_exceptions ^= <potion of lignification
+autopickup_exceptions ^= <scroll of immolation
+
+# Rarely do I want random effects.
 autopickup_exceptions += >wand of random effects
+
+# Easy assign blood potion.
 item_slot += potion of blood:q
