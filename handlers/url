@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl "$(cat "$CRC_FILE")"

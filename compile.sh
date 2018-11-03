@@ -4,6 +4,8 @@ URL="https://github.com/shacknetisp/crawl-rc"
 cd "$(dirname "$0")"
 test -e compile.sh || exit 1
 
+ROOT="$(pwd)"
+
 mkdir -p url_cache
 
 TMP="/tmp/crc_$RANDOM"
@@ -13,31 +15,29 @@ echo "#-#-# Automatically Compiled Units"
 echo "#-#-# Generated from $URL"
 echo "#-#-# Units Begin:"
 
-for i in url/*; do
-    test -e "$i" || continue;
+cd "$ROOT/include"
 
-    echo
-    echo "#-#-# Unit:" "$(basename "$i")"
-    curl "$(cat "$i")" > "$TMP" && {
-        cat "$TMP" > url_cache/"$(basename "$i")"
-    }
-    cat url_cache/"$(basename "$i")"
+for dir in *; do
+    test -d "$dir" || continue;
+
+    for file in "$dir"/*; do
+        test -e "$file" || continue;
+
+        dext=${file##*.}
+        ext=${dext#.}
+
+        export CRC_FILE="$file"
+        export CRC_NAME="$(basename "$file" .$ext)"
+
+        echo
+        echo "#-#-# Unit: $CRC_NAME ($CRC_FILE)"
+
+        test -e "$ROOT/handlers/$ext" && {
+            bash "$ROOT/handlers/$ext"
+        } || echo "No handler for extension: $ext" > /dev/stderr
+    done
 done
 
-for i in insert/*; do
-    test -e "$i" || continue;
-
-    echo
-    echo "#-#-# Unit:" "$(basename "$i")"
-    cat "$i"
-done
-
-for i in script/*; do
-    test -e "$i" || continue;
-
-    echo
-    echo "#-#-# Unit:" "$(basename "$i")"
-    bash "$i"
-done
+cd ..
 
 rm "$TMP"

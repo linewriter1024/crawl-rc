@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash "$CRC_FILE"
