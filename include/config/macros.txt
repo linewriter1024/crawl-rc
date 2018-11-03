@@ -1,6 +1,6 @@
 # Conventions:
 # - Number Keys: Per-game macros, do not override in rc file.
-# - Fn Keys: Spells (see config/spell_fn_macros.script)
+# - Fn Keys: Spells (see spell_fn_macros)
 
 # "Prayer", first god ability.
 macros += M p aa
