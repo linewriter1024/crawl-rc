@@ -1,10 +1,6 @@
 {
-    ready_r_f = function() end
+    ready_r_f = {}
     function ready_r(f)
-        local old = ready_r_f
-        function ready_r_f(...)
-            old(...)
-            f(...)
-        end
+        table.insert(ready_r_f, f)
     end
 }

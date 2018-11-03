@@ -1,3 +1,7 @@
 <
-    ready = ready_r_f
+    function ready()
+        for _,v in ipairs(ready_r_f) do
+            v()
+        end
+    end
 >

@@ -9,10 +9,15 @@ ROOT="$(pwd)"
 TMP="/tmp/crc_$RANDOM"
 touch "$TMP"
 
+reset_lua() {
+    echo ": --"
+}
+
 echo "#-#-# Automatically Compiled Units"
 echo "#-#-# Generated from $URL"
 
-echo
+echo "#-#-# Header"
+reset_lua
 cat core/header
 
 echo
@@ -30,12 +35,14 @@ process_dir() {
             ext=${dext#.}
 
             export CRC_FILE="$file"
+            export CRC_DIR="$(basename "$(dirname "$file")")"
             export CRC_NAME="$(basename "$file" .$ext)"
 
             echo
-            echo "#-#-# Unit: $CRC_NAME ($CRC_FILE)"
+            echo "#-#-# Unit: $CRC_NAME ($CRC_DIR/$CRC_NAME.$ext)"
 
             test -e "$ROOT/handlers/$ext" && {
+                reset_lua
                 bash "$ROOT/handlers/$ext"
             } || echo "No handler for extension: $ext" > /dev/stderr
         fi
@@ -43,13 +50,15 @@ process_dir() {
 }
 
 for dir in "$@"; do
-    test -d "$dir" || { echo "Not a directory: $dir"; exit 1; }
+    test -d "$dir" || { echo "Not a directory: $dir" > /dev/stderr; exit 1; }
 
     process_dir "$dir"
 done
 
 echo
 echo "#-#-# Units End"
+echo "#-#-# Footer"
+reset_lua
 cat core/footer
 
 rm "$TMP"
