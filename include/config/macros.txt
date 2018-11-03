@@ -4,3 +4,7 @@
 
 # "Prayer", first god ability.
 macros += M p aa
+
+# Recap items on current level.
+# Ctrl+]
+macros += M \{-3} *f@\{13}
