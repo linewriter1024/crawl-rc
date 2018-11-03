@@ -11,9 +11,12 @@ touch "$TMP"
 
 echo "#-#-# Automatically Compiled Units"
 echo "#-#-# Generated from $URL"
-echo "#-#-# Units Begin:"
 
-cd "$ROOT/include"
+echo
+cat core/header
+
+echo
+echo "#-#-# Units Begin"
 
 process_dir() {
     dir="$1"
@@ -39,12 +42,14 @@ process_dir() {
     done
 }
 
-for dir in *; do
-    test -d "$dir" || continue;
+for dir in "$@"; do
+    test -d "$dir" || { echo "Not a directory: $dir"; exit 1; }
 
     process_dir "$dir"
 done
 
-cd ..
+echo
+echo "#-#-# Units End"
+cat core/footer
 
 rm "$TMP"
