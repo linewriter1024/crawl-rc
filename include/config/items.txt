@@ -2,7 +2,9 @@ ae := autopickup_exceptions
 
 # Force pickup of some "dangerous" items.
 ae ^= <potion of lignification
+
 ae ^= <scroll of immolation
+ae ^= <scroll of vulnerability
 
 # Rarely do I want random effects.
 ae += >wand of random effects
