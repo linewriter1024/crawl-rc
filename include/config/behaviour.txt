@@ -2,3 +2,5 @@ default_manual_training = true
 
 auto_butcher = true
 auto_eat_chunks = true
+
+equip_unequip = true
