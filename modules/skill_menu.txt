@@ -1,9 +1,7 @@
 # Display skill menu on game start.
 {
-    local need = true
-    ready_r(function()
-        if you.turns() == 0 and need and you.race() ~= "Gnoll" then
-            need = false
+    nrc.register_ready_start(function()
+        if you.race() ~= "Gnoll" then
             crawl.sendkeys("m")
         end
     end)
