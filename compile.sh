@@ -10,10 +10,6 @@ reset_lua() {
 echo "#-#-# Automatically Compiled Units"
 echo "#-#-# Generated from $URL"
 
-echo "#-#-# Header"
-reset_lua
-cat $ROOT/core/header
-
 echo
 echo "#-#-# Units Begin"
 
@@ -48,6 +44,8 @@ process_dir() {
     done
 }
 
+process_dir "$ROOT/core/header"
+
 for path in "$@"; do
     test -e "$path" || { echo "Does not exist: $path" > /dev/stderr; exit 1; }
 
@@ -58,8 +56,4 @@ for path in "$@"; do
     fi
 done
 
-echo
-echo "#-#-# Units End"
-echo "#-#-# Footer"
-reset_lua
-cat $ROOT/core/footer
+process_dir "$ROOT/core/footer"
