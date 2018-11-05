@@ -1,4 +1,3 @@
-# Call all external ready functions.
 {
     ready_r(function() AnnounceDamage() end)
 }
