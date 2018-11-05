@@ -1,0 +1,18 @@
+{
+    local slots = {
+        cloak = "Cloak",
+        helmet = "Helmet",
+        gloves = "Gloves",
+        boots = "Boots",
+    }--
+
+    add_autopickup_func(function(it, name)
+        if it.class(true) ~= "armour" then return false end
+        if it.is_useless then return false end
+
+        local sub = it.subtype()
+        local eq = items.equipped_at(slots[sub])
+
+        return not eq
+    end)
+}
