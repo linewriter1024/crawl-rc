@@ -1,10 +1,7 @@
 #!/bin/bash
 URL="https://github.com/shacknetisp/crawl-rc"
 
-cd "$(dirname "$0")"
-test -e compile.sh || exit 1
-
-ROOT="$(pwd)"
+ROOT="$(dirname "$0")"
 
 reset_lua() {
     echo ": --"
@@ -15,7 +12,7 @@ echo "#-#-# Generated from $URL"
 
 echo "#-#-# Header"
 reset_lua
-cat core/header
+cat $ROOT/core/header
 
 echo
 echo "#-#-# Units Begin"
@@ -65,4 +62,4 @@ echo
 echo "#-#-# Units End"
 echo "#-#-# Footer"
 reset_lua
-cat core/footer
+cat $ROOT/core/footer
