@@ -11,8 +11,9 @@
         if it.is_useless then return false end
 
         local sub = it.subtype()
-        local eq = items.equipped_at(slots[sub])
+        if not slots[sub] then return false end
 
+        local eq = items.equipped_at(slots[sub])
         return not eq
     end)
 }
