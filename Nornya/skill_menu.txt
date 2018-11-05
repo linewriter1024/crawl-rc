@@ -2,7 +2,7 @@
 {
     local need = true
     ready_r(function()
-        if you.turns() == 0 and need then
+        if you.turns() == 0 and need and you.race() ~= "Gnoll" then
             need = false
             crawl.sendkeys("m")
         end
