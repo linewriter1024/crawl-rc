@@ -1,0 +1,19 @@
+#!/bin/bash
+
+filter() {
+    oldifs="$IFS"
+    IFS=""
+    while read line; do
+        block=$(echo "$line" | tr -d '[:space:]')
+        printf "%s" "$line"
+        if [[ "$block" == "{" ]] || [[ "$block" == "}" ]]; then
+            printf "%s" " --"
+        fi
+        printf "\n"
+    done
+    IFS="$oldifs"
+}
+
+echo "{"
+sed "s/^/    /" < "$CRC_FILE" | filter
+echo "}"

@@ -7,4 +7,4 @@ A compiled version built from all included modules can be found on CBRO: [Nornya
 # Modules
 Various modules are included.
 * To use all of them: `./compile.sh modules`.
-* Selective inclusion example: `./compile.sh modules/skill_menu.txt modules/Nornya/base`
+* Selective inclusion example: `./compile.sh modules/skill_menu.lua modules/Nornya/base`
