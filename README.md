@@ -1,5 +1,5 @@
 # Usage
-`./compile.sh <dir/file> [<dir/file2> ...]` will output the compiled config file to stdout.
+`./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
 
 # Compiled
 A compiled version built from all included modules can be found on CBRO: [Nornya.rc](http://crawl.berotato.org/crawl/rcfiles/crawl-git/Nornya.rc)
