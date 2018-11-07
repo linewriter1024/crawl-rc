@@ -8,3 +8,9 @@ A compiled version built from all included modules can be found on CBRO: [Nornya
 Various modules are included.
 * To use all of them: `./compile.sh modules`.
 * Selective inclusion example: `./compile.sh modules/skill_menu.lua modules/Nornya/base`
+
+# Core Lua Library
+All functions are contained in the `nrc` table.
+
+* `nrc.register_ready(f)`: Will register `f` and call it upon Crawl's `ready()` function.
+* `nrc.register_ready_start(f)`: Similiar to `nrc.register_ready` but will only fire when a Crawl game is begun/loaded and it is the first turn (`you.turns() == 0`).
