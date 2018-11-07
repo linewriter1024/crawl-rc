@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Filters lines with (when stripped) only "{" or "}" to include a blank lua comment.
+# This prevents Crawl from interpreting them as the end of a lua block.
 filter() {
     oldifs="$IFS"
     IFS=""
@@ -15,5 +17,6 @@ filter() {
 }
 
 echo "{"
+# Indent file and output.
 sed "s/^/    /" < "$CRC_FILE" | filter
 echo "}"
