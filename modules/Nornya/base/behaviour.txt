@@ -4,3 +4,5 @@ auto_butcher = true
 auto_eat_chunks = true
 
 equip_unequip = true
+
+rest_wait_ancestor = true
