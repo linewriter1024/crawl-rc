@@ -6,6 +6,8 @@ ae ^= <potion of lignification
 ae ^= <scroll of immolation
 ae ^= <scroll of vulnerability
 
+ae ^= <potion of mutation
+
 # Rarely do I want random effects.
 ae += >wand of random effects
 
