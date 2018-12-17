@@ -12,7 +12,7 @@ add_autopickup_func(function(it, name)
     local sub = it.subtype()
     if not slots[sub] then return nil end
 
-    if sub == "gloves" and you.has_claws() then return nil end
+    if sub == "gloves" and you.has_claws() > 0 then return nil end
 
     local eq = items.equipped_at(slots[sub])
     return not eq
