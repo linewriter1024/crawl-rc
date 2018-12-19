@@ -1,5 +1,4 @@
 # Conventions:
-# - Number Keys: Per-game macros, do not override in rc file.
 # - Fn Keys: Spells (see spell_fn_macros)
 
 # "Prayer", first god ability.
@@ -7,3 +6,7 @@ macros += M p aa
 
 # Recap items on current level.
 macros += M ] *f@\{13}
+
+# Evocation macros.
+macros += M 1 Vc
+macros += M 2 Vd
