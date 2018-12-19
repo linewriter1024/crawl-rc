@@ -1,3 +1,5 @@
+Configuration for [DCSS](https://crawl.develz.org).
+
 # Usage
 `./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
 
