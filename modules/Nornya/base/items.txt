@@ -1,12 +1,14 @@
 ae := autopickup_exceptions
 
 # Force pickup of some "dangerous" items.
+# Lig and Mut are useless for some undead species.
+: if not ({Mummy = true, Ghoul = true})[you.race()] then
 ae ^= <potion of lignification
+ae ^= <potion of mutation
+: end
 
 ae ^= <scroll of immolation
 ae ^= <scroll of vulnerability
-
-ae ^= <potion of mutation
 
 # Rarely do I want random effects.
 ae += >wand of random effects
@@ -15,3 +17,6 @@ ae += <throwing net
 
 # Easy assign blood potion.
 item_slot += potion of blood:q
+
+# And crystal balls.
+item_slot += crystal ball of energy:c
