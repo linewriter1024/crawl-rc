@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "# Bind first 10 spells to function keys."
+echo "# Bind first 11 spells to function keys."
 
 alphabet="abcdefghijklmnopqrstuvwxyz"
 
-for i in $(seq 0 9); do
+for i in $(seq 0 10); do
     # WebTiles
     echo "macros += M \{-$(expr 1011 + $i)} z${alphabet:$i:1}"
     # Local
