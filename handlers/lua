@@ -18,5 +18,5 @@ filter() {
 
 echo "{"
 # Indent file and output.
-sed "s/^/    /" < "$CRC_FILE" | filter
+sed "s/^/\t/" < "$CRC_FILE" | filter
 echo "}"
