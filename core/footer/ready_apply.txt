@@ -1,7 +1,7 @@
 <
-    function ready()
-        for _,v in ipairs(nrc.ready_f) do
-            v()
-        end
-    end
+	function ready()
+		for _,v in ipairs(nrc.ready_f) do
+			v()
+		end
+	end
 >
