@@ -21,3 +21,12 @@ item_slot += potion of blood:q
 
 # And crystal balls.
 item_slot += crystal ball of energy:c
+
+# Autoinscriptions
+ai := autoinscribe
+
+ai += potion of curing:@q1
+ai += scroll of identify:@r1
+ai += scroll of remove curse:@r2
+ai += blowgun:@w1
+ai += ration:@e1
