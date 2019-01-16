@@ -1,0 +1,4 @@
+: if you.race() == "Vampire" then
+spell_slots += Regeneration:R
+macros += M 6 qqzR
+: end
