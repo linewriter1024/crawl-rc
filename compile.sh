@@ -40,7 +40,7 @@ process_file() {
 	test -e "$ROOT/handlers/$ext" && {
 		reset_lua
 		# Run handler (with exported variables above).
-		bash "$ROOT/handlers/$ext"
+		. "$ROOT/handlers/$ext"
 	} || echo "No handler for extension: $ext" > /dev/stderr
 }
 
