@@ -6,3 +6,5 @@ auto_eat_chunks = true
 equip_unequip = true
 
 rest_wait_ancestor = true
+
+auto_hide_spells = true
