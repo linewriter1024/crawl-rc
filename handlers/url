@@ -1,3 +1,6 @@
 #!/bin/bash
 
-curl "$(cat "$CRC_FILE")"
+URL="$(cat "$CRC_FILE")"
+
+echo "# From: $URL"
+curl "$URL"
