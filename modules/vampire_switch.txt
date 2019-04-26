@@ -1,0 +1,15 @@
+# Original by kitchen_ace: https://crawl.develz.org/tavern/viewtopic.php?p=338233#p338233
+macros += M c ===VAMP_SWITCH
+{
+	function VAMP_SWITCH()
+		if nrc.check_version(0, 24) and you.race() == "Vampire" then
+			if you.hunger_name() == "alive" then
+				crawl.sendkeys("af")
+			else
+				crawl.sendkeys("ag")
+			end
+		else
+			crawl.do_commands{"CMD_BUTCHER"}
+		end
+	end
+}
