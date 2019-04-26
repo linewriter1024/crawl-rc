@@ -4,5 +4,5 @@ function nrc.check_version(a, b)
 	local ca, cb = crawl.version("major"):match("(%d*).(%d*)")
 	ca = tonumber(ca)
 	cb = tonumber(cb)
-	return (a > ca) or (a == ca and b >= cb)
+	return (ca > a) or (ca == a and cb >= b)
 end
