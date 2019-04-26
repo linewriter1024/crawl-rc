@@ -1,4 +1,4 @@
-Configuration for [DCSS](https://crawl.develz.org).
+Configuration for [DCSS](https://crawl.develz.org). Used to compile [my own rc file](http://crawl.berotato.org/crawl/rcfiles/crawl-git/Nornya.rc).
 
 # Usage
 `./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
