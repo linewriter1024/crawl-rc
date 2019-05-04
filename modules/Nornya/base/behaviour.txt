@@ -3,7 +3,7 @@ default_manual_training = true
 auto_butcher = true
 auto_eat_chunks = true
 
-autofight_stop = 70
+autofight_stop = 60
 
 equip_unequip = true
 

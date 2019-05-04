@@ -1,4 +1,4 @@
-hp_warning = 50
+hp_warning = 60
 hp_colour = 70:yellow, 40:red
 
 show_more = false
