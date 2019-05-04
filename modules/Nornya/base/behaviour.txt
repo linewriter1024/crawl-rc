@@ -3,6 +3,8 @@ default_manual_training = true
 auto_butcher = true
 auto_eat_chunks = true
 
+autofight_stop = 70
+
 equip_unequip = true
 
 rest_wait_ancestor = true
