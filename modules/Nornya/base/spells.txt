@@ -1,4 +1,4 @@
-: if you.race() == "Vampire" then
+: if not nrc.check_version(0, 24) and you.race() == "Vampire" then
 spell_slots += regeneration:R
 macros += M 6 qqzR5
 : end
