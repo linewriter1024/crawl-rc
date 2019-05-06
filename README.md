@@ -14,3 +14,6 @@ All functions are contained in the `nrc` table.
 * `nrc.register_ready(f)`: Will register `f` and call it upon Crawl's `ready()` function.
 * `nrc.register_ready_start(f)`: Similiar to `nrc.register_ready` but will only fire when a Crawl game is begun/loaded and it is the first turn (`you.turns() == 0`).
 * `nrc.check_version([a], [b])`: Returns (crawl version >= specified version).
+
+## Features Table
+* See [features.lua](core/header/features.lua).
