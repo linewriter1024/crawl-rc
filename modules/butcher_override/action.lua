@@ -1,7 +1,7 @@
 function butcher_override()
 	-- Two-state vampires.
 	-- Idea derived from kitchen_ace: https://crawl.develz.org/tavern/viewtopic.php?p=338233#p338233
-	if nrc.check_version(0, 24) and you.race() == "Vampire" then
+	if nrc.features.two_state_vampires and you.race() == "Vampire" then
 		if you.hunger_name() == "alive" then
 			crawl.sendkeys("af")
 		else
