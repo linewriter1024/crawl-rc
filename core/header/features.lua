@@ -1,6 +1,7 @@
 local f = {}
 nrc.features = f
 
+-- Shortcuts.
 local v = nrc.check_version
 
 -- Two-state vampires.
