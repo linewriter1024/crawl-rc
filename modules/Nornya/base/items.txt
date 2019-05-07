@@ -16,10 +16,6 @@ ae += >wand of random effects
 ae += <throwing net
 ae += <phantom mirror
 
-# Easy assign blood potion.
-item_slot += potion of blood:q
-
-# And crystal balls.
 item_slot += crystal ball of energy:c
 
 # Autoinscriptions
