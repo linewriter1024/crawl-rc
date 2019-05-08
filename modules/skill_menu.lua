@@ -1,6 +1,6 @@
 -- Display skill menu on game start.
 nrc.register_ready_start(function()
-	if you.race() ~= "Gnoll" then
+	if nrc.features.you_select_skills then
 		crawl.sendkeys("m")
 	end
 end)

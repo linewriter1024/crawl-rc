@@ -4,7 +4,13 @@ nrc.features = f
 -- Shortcuts.
 local v = nrc.check_version
 
--- Two-state vampires.
-f.two_state_vampires = you.ability_table().f == "Exsanguinate"
--- Old multi-state vampires with blood potions.
-f.blood_vampires = not f.two_state_vampires
+-- You are a two-state vampire.
+f.you_two_state_vampire = you.race() == "Vampire" and you.ability_table().f == "Exsanguinate"
+-- You are a blood-potion vampire.
+f.you_blood_vampire = you.race() == "Vampire" and not f.you_two_state_vampire
+
+-- You can select which skills to train.
+f.you_select_skills = you.race() ~= "Gnoll"
+
+-- You can mutate.
+f.you_mutate = not ({Mummy = true, Ghoul = true})[you.race()]

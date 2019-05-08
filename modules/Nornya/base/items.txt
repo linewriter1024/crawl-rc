@@ -1,9 +1,8 @@
 ae := autopickup_exceptions
 
-# Lig and Mut are useless for some undead species.
-: if not ({Mummy = true, Ghoul = true})[you.race()] then
-ae ^= <potion of lignification
-ae ^= <potion of mutation
+: if nrc.features.you_mutate then
+	ae ^= <potion of lignification
+	ae ^= <potion of mutation
 : end
 
 ae ^= <scroll of immolation
