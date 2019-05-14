@@ -15,6 +15,9 @@ ae += >wand of random effects
 ae += <throwing net
 ae += <phantom mirror
 
+ae += <lamp of fire
+ae += <fan of gales
+
 item_slot += crystal ball of energy:c
 
 # Autoinscriptions
