@@ -5,7 +5,7 @@ Configuration for [DCSS](https://crawl.develz.org). Used to compile [my own rc f
 
 # Modules
 Various modules are included.
-* To use all of them: `./compile.sh modules`.
+* To use all of them: `./compile.sh modules`
 * Selective inclusion example: `./compile.sh modules/skill_menu.lua modules/Nornya/base`
 
 # Core Lua Library
