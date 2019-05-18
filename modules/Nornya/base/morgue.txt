@@ -1,2 +1,1 @@
 user_note_prefix = >>
-note_chat_messages = true
