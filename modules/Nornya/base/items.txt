@@ -1,14 +1,31 @@
 ae := autopickup_exceptions
 
 : if nrc.features.you_mutate then
-	ae ^= <potion of lignification
-	ae ^= <potion of mutation
+	: if you.god() ~= "Zin" then
+		ae ^= <potions? of lignification
+	: end
+	ae ^= <potions? of mutation
 : end
 
-ae ^= <scroll of immolation
-ae ^= <scroll of vulnerability
-ae ^= <scroll of torment
-ae ^= <scroll of holy word
+ae ^= <scrolls? of immolation
+ae ^= <scrolls? of vulnerability
+
+: if not nrc.features.you_hate_torment then
+	ae ^= <scrolls? of torment
+: end
+
+: if nrc.features.you_hate_holy then
+	ae += >scrolls? of holy word
+: end
+
+: if you.god() == "Trog" then
+	ae += >potions? of brilliance
+	ae += >potions? of berserk
+: end
+
+: if you.race() == "Formicid" then
+	ae += >wand of digging
+: end
 
 ae += <throwing net
 ae += <phantom mirror
