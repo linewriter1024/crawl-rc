@@ -27,6 +27,8 @@ ae ^= <scrolls? of vulnerability
 	ae += >wand of digging
 : end
 
+ae += <unidentified.*magical staff
+
 ae += <throwing net
 ae += <phantom mirror
 
