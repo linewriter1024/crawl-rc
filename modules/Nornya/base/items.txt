@@ -7,10 +7,8 @@ ae := autopickup_exceptions
 
 ae ^= <scroll of immolation
 ae ^= <scroll of vulnerability
-ae += >scroll of holy word
-
-# Rarely do I want random effects.
-ae += >wand of random effects
+ae ^= <scroll of torment
+ae ^= <scroll of holy word
 
 ae += <throwing net
 ae += <phantom mirror
