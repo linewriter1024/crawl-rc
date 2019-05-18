@@ -15,8 +15,8 @@ f.you_select_skills = you.race() ~= "Gnoll"
 -- You can mutate.
 f.you_mutate = not ({Mummy = true, Ghoul = true})[you.race()]
 
--- Holy damage affects you.
-f.you_hate_holy = ({Mummy = true, Ghoul = true, Vampire = true, Demonspawn = true})[you.race()]
+-- Holy damage does not affect you.
+f.you_ignore_holy = not ({Mummy = true, Ghoul = true, Vampire = true, Demonspawn = true})[you.race()]
 
 -- Torment does not affect you.
 f.you_ignore_torment = ({Mummy = true, Ghoul = true})[you.race()]

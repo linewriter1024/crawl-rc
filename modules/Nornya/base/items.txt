@@ -10,11 +10,11 @@ ae := autopickup_exceptions
 ae ^= <scrolls? of immolation
 ae ^= <scrolls? of vulnerability
 
-: if not nrc.features.you_hate_torment then
+: if nrc.features.you_ignore_torment then
 	ae ^= <scrolls? of torment
 : end
 
-: if nrc.features.you_hate_holy then
+: if not nrc.features.you_ignore_holy then
 	ae += >scrolls? of holy word
 : end
 
