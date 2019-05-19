@@ -34,18 +34,3 @@ ae += <phantom mirror
 
 ae += <lamp of fire
 ae += <fan of gales
-
-item_slot += crystal ball of energy:c
-
-# Autoinscriptions
-ai := autoinscribe
-
-ai += potions? of curing:@q1
-ai += scrolls? of identify:@r1
-ai += scrolls? of remove curse:@r2
-ai += blowgun:@w1
-ai += ( ration):@e1
-
-ai += staff of wizardry:@w5
-ai += staff of power:@w6
-ai += staff of energy:@w7
