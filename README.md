@@ -2,7 +2,10 @@ Configuration for [DCSS](https://crawl.develz.org). Used to compile [my own rc f
 
 # Usage
 * `./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
-* To include a header, use something like `(echo "# A HEADER LINE"; echo "# ANOTHER HEADER LINE"; ./compile.sh ...) > /path/to/output/file.rc`
+* Example command including an additional header and writing the output to a file:
+  ```
+  (echo "# A HEADER LINE"; echo "# ANOTHER HEADER LINE"; ./compile.sh modules) > /path/to/output/file.rc
+  ```
 
 # Modules
 Various modules are included.
