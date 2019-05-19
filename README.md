@@ -20,6 +20,11 @@ All functions are contained in the `nrc` table.
 * `nrc.register_ready_start(f)`: Similiar to `nrc.register_ready` but will only fire when a Crawl game is begun/loaded and it is the first turn (`you.turns() == 0`).
 * `nrc.check_version([a], [b])`: Returns (crawl version >= specified version).
 
+### Settings
+* `nrc.settings.set(setting, value)`: Set a setting.
+* `nrc.settings.default(setting, value)`: Set a setting's default value.
+* `nrc.settings.get(setting)`: Get a setting's current value or default if no value has been set.
+
 ## You
 * `nrc.you.starving()`: Are you in hunger trouble (starving or fainting)?
 * `nrc.you.castable(spell)`: Is a spell castable at the moment?
