@@ -1,5 +1,3 @@
 : if nrc.features.you_blood_vampire then
 	item_slot += potion of blood:q
-	spell_slots += regeneration:R
-	macros += M 6 qqzR5
 : end
