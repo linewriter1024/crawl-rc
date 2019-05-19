@@ -22,7 +22,7 @@ All functions are contained in the `nrc` table.
 * `nrc.you.cast(spell, [force])`: Cast a spell.
 
 ## World
-* `nrc.world.has_skeleton(x, y)`: Will check if there's something with a skeleton on a cell.
+* `nrc.world.has_skeleton(x, y)`: Is there something with a skeleton on a cell?
 
 ## Features Table
 `nrc.features` is a table of boolean flags. See [features.lua](core/header/features.lua) for the documented list.
