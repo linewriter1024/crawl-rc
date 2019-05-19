@@ -1,12 +1,7 @@
 function butcher_override()
-	-- Two-state vampires.
-	-- Idea derived from kitchen_ace: https://crawl.develz.org/tavern/viewtopic.php?p=338233#p338233
-	if nrc.features.you_two_state_vampire then
-		if you.hunger_name() == "alive" then
-			crawl.sendkeys("af")
-		else
-			crawl.sendkeys("ag")
-		end
+	-- Animate skeleton.
+	if nrc.you.castable("Animate Skeleton") and nrc.world.has_skeleton(0, 0) then
+		nrc.you.cast("Animate Skeleton")
 	-- If no special option, just butcher as usual.
 	else
 		crawl.do_commands{"CMD_BUTCHER"}
