@@ -1,5 +1,6 @@
 ss := spell_slot
 
-# Handled in other ways.
 ss += animate skeleton:S
+ss += blink:B
+ss += passwall:P
 ss += regeneration:R
