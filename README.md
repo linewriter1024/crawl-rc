@@ -1,7 +1,8 @@
 Configuration for [DCSS](https://crawl.develz.org). Used to compile [my own rc file](https://crawl.kelbi.org/crawl/rcfiles/crawl-git/Nornya.rc).
 
 # Usage
-`./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
+* `./compile.sh <dir or file> [<dir or file> ...]` will output the compiled config file to stdout.
+* To include a header, use something like `(echo "# A HEADER LINE"; echo "# ANOTHER HEADER LINE"; ./compile.sh ...) > /path/to/output/file.rc`
 
 # Modules
 Various modules are included.
