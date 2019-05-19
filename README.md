@@ -11,9 +11,18 @@ Various modules are included.
 # Core Lua Library
 All functions are contained in the `nrc` table.
 
+## System
 * `nrc.register_ready(f)`: Will register `f` and call it upon Crawl's `ready()` function.
 * `nrc.register_ready_start(f)`: Similiar to `nrc.register_ready` but will only fire when a Crawl game is begun/loaded and it is the first turn (`you.turns() == 0`).
 * `nrc.check_version([a], [b])`: Returns (crawl version >= specified version).
 
+## You
+* `nrc.you.starving()`: Are you in hunger trouble (starving or fainting)?
+* `nrc.you.castable(spell)`: Is a spell castable at the moment?
+* `nrc.you.cast(spell, [force])`: Cast a spell.
+
+## World
+* `nrc.world.has_skeleton(x, y)`: Will check if there's something with a skeleton on a cell.
+
 ## Features Table
-* See [features.lua](core/header/features.lua).
+`nrc.features` is a table of boolean flags. See [features.lua](core/header/features.lua) for the documented list.
