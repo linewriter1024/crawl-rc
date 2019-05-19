@@ -1,0 +1,5 @@
+ss := spell_slot
+
+# Handled in other ways.
+ss += animate skeleton:S
+ss += regeneration:R
