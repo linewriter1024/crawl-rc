@@ -1,15 +1,19 @@
+# Slot for evocation macro 1.
 item_slot += crystal ball of energy:c
 
 ai := autoinscribe
 
+# Super-common utilities.
 ai += potions? of curing:@q1
 ai += scrolls? of identify:@r1
 ai += scrolls? of remove curse:@r2
 ai += blowgun:@w1
 ai += ( ration):@e1
 
+# Quick switch for utility staves.
 ai += staff of wizardry:@w5
 ai += staff of power:@w6
 ai += staff of energy:@w7
 
+# Sometimes I run out of other ammo and start tabbing nets by accident.
 ai += throwing net:!f

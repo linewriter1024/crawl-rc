@@ -30,7 +30,7 @@ ae ^= <scrolls? of vulnerability
 ae += <unidentified.*magical staff
 
 ae += <throwing net
-ae += <phantom mirror
 
 ae += <lamp of fire
 ae += <fan of gales
+ae += <phantom mirror
