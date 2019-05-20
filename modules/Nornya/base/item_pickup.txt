@@ -7,17 +7,23 @@ ae := autopickup_exceptions
 	ae ^= <potions? of mutation
 : end
 
+# BOOM!
 ae ^= <scrolls? of immolation
+
+# Ever need to hex a tough enemy?
 ae ^= <scrolls? of vulnerability
 
+# If it doesn't affect you, who wouldn't cast torment?
 : if nrc.features.you_ignore_torment then
 	ae ^= <scrolls? of torment
 : end
 
+# There are some really dangerous undead out there.
 : if not nrc.features.you_ignore_holy then
 	ae += >scrolls? of holy word
 : end
 
+# You'll never need these with TROG.
 : if you.god() == "Trog" then
 	ae += >potions? of brilliance
 	ae += >potions? of berserk
@@ -27,10 +33,16 @@ ae ^= <scrolls? of vulnerability
 	ae += >wand of digging
 : end
 
+# Magical staves can provide resistances even when you're not a caster.
 ae += <unidentified.*magical staff
 
+# Throwing nets halt enemies for escapes.
 ae += <throwing net
 
+# The most useful elemental evokables.
 ae += <lamp of fire
 ae += <fan of gales
+ae += <phial of floods
+
+# Phantom mirrors are always handy.
 ae += <phantom mirror
