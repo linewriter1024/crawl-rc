@@ -46,3 +46,6 @@ ae += <phial of floods
 
 # Phantom mirrors are always handy.
 ae += <phantom mirror
+
+# Slowed enemy > fast enemy.
+ae += <curare
