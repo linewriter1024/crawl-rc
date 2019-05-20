@@ -6,7 +6,8 @@ end
 
 function nrc.you.castable(spell)
 	return (
-		you.mp() >= spells.mana_cost(spell)
+		spells.memorised(spell)
+		and you.mp() >= spells.mana_cost(spell)
 		and not spells.god_hates(spell)
 		and spells.fail_severity(spell) == 0
 		and not you.confused()
