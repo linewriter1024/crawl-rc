@@ -4,12 +4,12 @@ function nrc.you.starving()
 	return you.hunger_name() == "starving" or you.hunger_name() == "fainting"
 end
 
-function nrc.you.castable(spell)
+function nrc.you.castable(spell, fail)
 	return (
 		spells.memorised(spell)
 		and you.mp() >= spells.mana_cost(spell)
 		and not spells.god_hates(spell)
-		and spells.fail_severity(spell) == 0
+		and spells.fail_severity(spell) <= (fail or 0)
 		and not you.confused()
 		and not you.paralysed()
 		and not you.berserk()
