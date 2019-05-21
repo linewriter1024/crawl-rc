@@ -47,5 +47,9 @@ ae += <phial of floods
 # Phantom mirrors are always handy.
 ae += <phantom mirror
 
+# Free allies are good.
+ae += <(box of beasts|boxes of beasts)
+ae += <sacks? of spiders
+
 # Slowed enemy > fast enemy.
 ae += <curare
