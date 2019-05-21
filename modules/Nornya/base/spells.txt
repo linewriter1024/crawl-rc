@@ -2,5 +2,6 @@ ss := spell_slot
 
 ss += animate skeleton:S
 ss += blink:B
+ss += deflect missiles:D
 ss += passwall:P
 ss += regeneration:R
