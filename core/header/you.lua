@@ -6,15 +6,19 @@ end
 
 function nrc.you.castable(spell, fail)
 	return (
+		-- Normally castable?
 		spells.memorised(spell)
 		and you.mp() >= spells.mana_cost(spell)
+		-- Penalized?
 		and not spells.god_hates(spell)
 		and spells.fail_severity(spell) <= (fail or 0)
+		-- Statuses.
 		and not you.confused()
 		and not you.paralysed()
 		and not you.berserk()
 		and not you.silenced()
 		and not nrc.you.starving()
+		-- Actions.
 		and not you.turn_is_over()
 		and not you.taking_stairs()
 	)
