@@ -8,7 +8,8 @@ local v = nrc.check_version
 f.hunger_exists = not not you.hunger_name
 
 -- You are a two-state vampire.
-f.you_two_state_vampire = you.race() == "Vampire" and (not f.hunger_exists) or ({alive = true, bloodless = true})[you.hunger_name()]
+f.you_two_state_vampire = you.race() == "Vampire" and ({alive = true, bloodless = true})[nrc.you.hunger_name()]
+
 -- You are a blood-potion vampire.
 f.you_blood_vampire = you.race() == "Vampire" and not f.you_two_state_vampire
 

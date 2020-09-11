@@ -1,7 +1,15 @@
 nrc.you = {}
 
+function nrc.you.hunger_name()
+	if you.hunger_name then
+		return you.hunger_name()
+	else
+		return "full"
+	end
+end
+
 function nrc.you.starving()
-	return you.hunger_name and (you.hunger_name() == "starving" or you.hunger_name() == "fainting")
+	return nrc.you.hunger_name() == "starving" or nrc.you.hunger_name() == "fainting"
 end
 
 function nrc.you.castable(spell, fail)
