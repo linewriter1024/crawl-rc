@@ -8,5 +8,3 @@ view_max_height = 50
 
 travel_delay = -1
 rest_delay = -1
-
-auto_hide_spells = true
