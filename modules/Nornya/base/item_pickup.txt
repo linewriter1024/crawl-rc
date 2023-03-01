@@ -10,6 +10,12 @@ ae := autopickup_exceptions
 # BOOM!
 ae ^= <scrolls? of immolation
 
+# Come over here!
+ae ^= <scrolls? of noise
+
+# Poison!
+ae ^= <scrolls? of poison
+
 # Ever need to hex a tough enemy?
 ae ^= <scrolls? of vulnerability
 
