@@ -39,9 +39,6 @@ ae ^= <scrolls? of vulnerability
 	ae += >wand of digging
 : end
 
-# Magical staves can provide resistances even when you're not a caster.
-ae += <unidentified.*magical staff
-
 # Throwing nets halt enemies for escapes.
 ae += <throwing net
 
