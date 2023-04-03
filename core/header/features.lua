@@ -23,4 +23,4 @@ f.you_mutate = not ({Mummy = true, Ghoul = true})[you.race()]
 f.you_ignore_holy = not ({Mummy = true, Ghoul = true, Vampire = true, Demonspawn = true})[you.race()]
 
 -- Torment does not affect you.
-f.you_ignore_torment = ({Mummy = true, Ghoul = true})[you.race()]
+f.you_ignore_torment = ({Mummy = true, Ghoul = true})[you.race()] or you.god() == "Kikubaaqudgha"
