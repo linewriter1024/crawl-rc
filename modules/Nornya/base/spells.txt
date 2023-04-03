@@ -6,3 +6,4 @@ ss += deflect missiles:D
 ss += passwall:P
 ss += regeneration:R
 ss += swiftness:W
+ss += dispel undead:U
