@@ -48,6 +48,7 @@ ae += <fan of gales
 ae += <phial of floods
 ae += <condenser vane
 ae += <tin of tremorstones
+ae += <lightning rod
 
 # Phantom mirrors are always handy.
 ae += <phantom mirror
